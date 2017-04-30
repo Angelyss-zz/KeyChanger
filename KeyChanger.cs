@@ -95,7 +95,7 @@ namespace KeyChanger
 						}
 
 						// Cancel the drop
-						TShock.Players[e.Msg.whoAmI].SendData(PacketTypes.ItemDrop, null, id);
+						TShock.Players[e.Msg.whoAmI].SendData(PacketTypes.ItemDrop, "", id);
 						// If the item is stackable, give them the same amount of in return; otherwise, return the excess
 						Random rand = new Random();
 						Item give = key.Items[rand.Next(0, key.Items.Count)];
